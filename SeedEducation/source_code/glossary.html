@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="希豆国际-Sentence Builder">
+	<meta name="description" content="Use this page to build your stickmen sentence.">
+	<meta name="author" content="dxx" >
+	<meta name="author" content="2017" >
+	<title>希豆国际-Sentence Builder</title>
+
+	<!-- CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+    <script src="assets/js/jquery-3.1.1.min.js"></script>          
+    <style >
+    	div .seatdiv {
+    		float: left;
+    		border: 1px solid black;
+    		height: 60px;
+    		padding: 5px;
+    		margin-bottom: 20px;
+
+    	}
+
+    	.card 	{
+    		float: left;
+    		padding: 5px;
+    		margin: 5px;
+    	}
+
+    	.card_punc 	{
+    		float: left;
+    		padding: 10px;
+    		margin: 5px;
+    	}
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- About start -->
+
+	<section id="about" class="pfblock pfblock">
+		<div class="container">
+			<div class="row ">
+	
+				<div class="pfblock-header wow fadeInUp">
+				
+					<h2 class="pfblock-title" > Seed Education Sentence Generator </h2>
+					<img width="100px" src="image/seed_logo_transparent.png">
+					<p>
+					
+						<div class="col-sm-2">
+							<label for="sentence"> Enter your sentence: </label>
+						</div>
+						<div class="col-sm-10">
+							<input class="form-control input-lg "  id="focusedInput" name="sentence" type="text" value=""></div>
+					
+
+					<br><br>
+					
+					<button class="btn btn-primary" id="submit" >Submit A Sentence</button>
+					<div class="pfblock-line"></div>
+					<div id="" class="col-sm-12">
+						<p id = "picture">
+							<div class="card"></div>
+					
+					</div>
+					
+				</div>
+
+				
+
+			</div>
+		</div>
+	</section>
+
+	<script>
+		  $(document).ready(function(){
+		      $("#submit").click(function(){
+
+		
+ 	                   /*Print the input sentence to screen*/
+      	                   var sentence = $("input[name=sentence").val();
+                           $("#picture").html("");
+ 		           var wlist = split_sentence(sentence);
+		      });
+		  });
+
+		  function split_sentence( sentence ){
+		  	var wlist = sentence.replace(/[^\w\s]|_/g, ' $&').split(" ");
+		  	var urlBase = "cards/";
+		  	var viewport = $("#picture").width();
+		  	var cardMargin = parseInt($('.card').css("margin"));
+		  	var num = wlist.length;
+
+		  	var width = (viewport -  num * cardMargin * 2)/num ;
+		  	console.log(width, "=" ,viewport, num, cardMargin);
+			
+			//adjust card div width
+
+
+		  	for ( i = 0; i < wlist.length; i++){
+		  		if ( wlist[i].match(/[^\w\s]|_/g) )
+		  		{
+					$("#picture").append('<div class="card_punc">' + wlist[i] + '</span></div>');
+				
+		  		}
+		  		else{
+		  			$("#picture").append('<div class="card"><img src="' + urlBase + wlist[i] + '.png"/></div>');
+				}
+
+		  	}
+
+
+		$('.card').css("width", width);
+		$('.card_punc').css("width", width/3);
+		$('.card_punc').css("font-size",  width/2+"px");
+    		$('.card_punc').css("padding-top",  width/4);
+
+		  }
+	</script>
+
+
+
+</body>
+</html>

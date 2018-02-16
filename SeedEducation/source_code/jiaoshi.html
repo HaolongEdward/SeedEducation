@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="希豆国际－进入课堂">
+	<meta name="description" content="输入教室号进入西豆课堂">
+	<meta name="author" content="dxx" >
+	<meta name="author" content="2017" >
+	<title>希豆国际-进入课堂</title>
+
+    <link rel="icon" href="image/Seed_logo.png">
+	<!-- CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="assets/css/animate.css" rel="stylesheet">
+    
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+    
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery-3.1.1.min.js"></script>       
+</head>
+
+<body>
+
+
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                                        <a class="navbar-brand" href="index.html"><a class="navbar-brand" href="index.html">希豆国际</a> 
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="about.html">关于我们</a></li>
+    	               	<li><a href="method.html">教学体系</a></li>
+						<li><a href="cooperation.html">学校合作</a></li>
+	                    <li><a href="become_an_agent.html">合作加盟</a></li>
+    					<li><a href="#">我的课堂</a></li>
+
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+
+	<!-- Navigation end -->
+
+    <!-- EnterMeeting start -->
+
+	<section id="enter" class="pfblock pfblock-gray">
+	   </section>
+	<section id="enter" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+	
+				<div class="pfblock-header wow fadeInUp">
+				
+					<h2 class="pfblock-title" >欢迎来到希豆英语课堂</h2>
+					<img width="100px" src="image/Seed_logo.png">
+					<div class="pfblock-line"></div>
+					<div id="hello">  </div>
+						<div class="pfblock-subtitle">
+					
+						<label for="mnumber">课堂号码</label>
+						<input type="number" name="mnumber" value="000000000">
+						<button id="AddSlug">进入课堂</button>
+					</div>
+					<script>
+						$(document).ready(function() {
+    						$('#AddSlug').click(function() {
+    							var mnum = $("input[name=mnumber]").val();
+    							var mlink = "https://zoom.us/j/" + mnum;
+	        					$('#hello').append("<p>"+mnum+"</p>");
+						    
+							    var win = window.open(mlink, '_blank');
+								if (win) {
+								    //Browser has allowed it to be opened
+								    win.focus();
+								} else {
+								    //Browser has blocked it
+								    alert('请在设置中允许弹出窗口');
+								}
+							});
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <!-- EnterMeeting ends -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12">
+                    
+                    <p class="copyright">
+                        © 2016 Seed Education | 603 March Road, Kanata, Ontario, Canada Tel: +1(613) 863 1016 | 上海市钦州北路1198号82号楼汇智大楼19楼 | 全国服务热线：028-83275375
+					</p><p>If a student cannot learn in the way we teach, we must teach in a way the student can learn. </p>
+<p class="copyright">
+                       
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+</body>
+</html>
