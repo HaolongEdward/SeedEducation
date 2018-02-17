@@ -493,13 +493,9 @@ textarea.form-control {
 
 /* ---------------------------------------------- */
 
-
-
-.pfblock {
-
-	padding: 120px 0 100px;
-	padding-top: 50px;
-
+.video-player {
+    width: 100%;
+    height: 1200px;
 }
 
 
@@ -750,7 +746,7 @@ textarea.form-control {
 
 
 
-#home {
+/*#home {
 	position: relative;
 	
 	height: 400px; 
@@ -776,7 +772,7 @@ textarea.form-control {
 			background-size: cover;
 
 	padding: -20px;
-}
+}*/
 
 
 
@@ -987,23 +983,20 @@ textarea.form-control {
 
 
 #footer {
-
-	background: #222;
-
-	text-align: center;
-
-	padding: 40px 0;
-
-	color: #FFF;
-
+    position: absolute;
+    width: 100%;
+    height: 190px;
+    background: rgb(122, 0, 0);
+    text-align: center;
+    padding: 40px 0;
+    color: white;
+    
 }
 
-
-
-.copyright {
-
-	margin: 0;
-
+.footer-container {
+    position: relative;
+    margin-top: 5%;
+    
 }
 
 
