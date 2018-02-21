@@ -774,7 +774,10 @@ textarea.form-control {
 	padding: -20px;
 }*/
 
-
+span {
+    color: white; 
+    background-color:darkred;
+}
 
 .home_content{
 	position: relative;
@@ -2276,4 +2279,14 @@ background-color: #fff;
 background-size: cover;
 
 padding: -20px;
+}
+
+
+
+/*about styles*/
+#about_1_picTable {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 0px;
+    margin-left:1%;
+    margin-right:1%
 }
