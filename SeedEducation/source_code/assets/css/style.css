@@ -2238,7 +2238,7 @@ padding: -20px;
     width: 100vw;
     height: 80vh;
     background: url('../../image/method_home.jpg');
-    background-size: contain;
+    background-size: 100vw 80vh;
     background-position: initial;
     background-repeat: no-repeat;
     min-height: 300px;
